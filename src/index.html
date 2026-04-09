@@ -6,11 +6,314 @@
     <title>Assignment 3 - Landing Page</title>
     <link href="./output.css" rel="stylesheet" />
   </head>
-  <body>
-    <!-- ========== NAVBAR ========== -->
+  <body class="bg-black text-white font-sans">
+    <!-- WRAPPER -->
+    <div class="relative">
+      <!-- TOGGLE -->
+      <input type="checkbox" id="menu-toggle" class="peer hidden" />
+
+      <!-- ========== NAVBAR ========== -->
+      <header class="top-0 w-full z-50 bg-black">
+        <div
+          class="max-w-6xl mx-auto px-5 py-4 flex justify-between items-center"
+        >
+          <!-- LOGO -->
+          <h1 class="text-xl font-bold">Tech.</h1>
+
+          <!-- MENU DESKTOP -->
+          <ul class="hidden md:flex gap-8 text-sm text-gray-300">
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Service</a></li>
+            <li><a href="#our-work">Our Work</a></li>
+            <li><a href="#team">Team</a></li>
+          </ul>
+
+          <!-- RIGHT -->
+          <div class="flex items-center gap-4">
+            <!-- BUTTON DESKTOP-->
+            <a
+              href="#contact"
+              class="hidden md:inline-block bg-[#421abc] px-6 py-2 rounded-full text-sm"
+            >
+              Contact Us
+            </a>
+
+            <!-- HAMBURGER -->
+            <label
+              for="menu-toggle"
+              class="md:hidden flex flex-col gap-1 cursor-pointer"
+            >
+              <span class="w-6 h-[2px] bg-white"></span>
+              <span class="w-6 h-[2px] bg-white"></span>
+              <span class="w-6 h-[2px] bg-white"></span>
+            </label>
+          </div>
+        </div>
+      </header>
+
+      <!-- MOBILE MENU -->
+      <div
+        class="fixed inset-0 bg-black/90 z-40 translate-x-full peer-checked:translate-x-0 transition duration-300 md:hidden flex flex-col p-6"
+      >
+        <!-- HEADER -->
+        <div class="flex justify-between items-center">
+          <h1 class="text-lg font-bold">Tech.</h1>
+          <label for="menu-toggle" class="text-3xl cursor-pointer"
+            >&times;</label
+          >
+        </div>
+
+        <!-- MENU LINKS -->
+        <ul class="flex flex-col gap-6 mt-10 text-gray-300">
+          <li><a href="#">About</a></li>
+          <li><a href="#">Service</a></li>
+          <li><a href="#">Our Work</a></li>
+          <li><a href="#">Team</a></li>
+        </ul>
+
+        <!-- BUTTON -->
+        <a
+          href="#"
+          class="mt-10 block text-center bg-[#421abc] py-3 rounded-full w-full md:w-60"
+        >
+          Contact Us
+        </a>
+      </div>
+    </div>
 
     <!-- ========== HERO SECTION ========== -->
+    <!-- HERO -->
+    <section class="bg-gradient-to-b from-black to-[#28038e4d] py-20">
+      <div
+        class="max-w-6xl mx-auto px-5 grid md:grid-cols-2 gap-10 items-center"
+      >
+        <!-- TEXT -->
+        <div>
+          <h2 class="text-3xl md:text-5xl font-bold mb-5">
+            Build with the <span class="italic">Future.</span>
+          </h2>
+
+          <p class="text-gray-400 mb-6 text-sm md:text-base">
+            From Building Sleek Website and Mobile Apps to Integrating AI
+            Solution, we help brands turn ideas into powerfull digital
+            experiences that connect,engage,and scale.
+          </p>
+
+          <a
+            href="#"
+            class="block text-center bg-[#421abc] py-3 rounded-full w-full md:w-60"
+          >
+            Let's Talk
+          </a>
+        </div>
+
+        <!-- IMAGE -->
+        <div class="text-center">
+          <img
+            src="../assets/images/hand.png"
+            class="w-full max-w-[400px] md:max-w-[500px] lg:max-w-[550px] object-contain drop-shadow-2xl"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="py-20 text-center">
+      <div class="max-w-3xl mx-auto px-5">
+        <h2 class="text-2xl md:text-3xl font-bold">Who We Are</h2>
+        <p class="mt-3 text-gray-300">
+          <span class="text-gray-500"
+            >We're a group of tech students trained in</span
+          >
+          building real-world digital products.
+          <span class="text-gray-500">From coding to design, we</span>
+          craft modern solutions.
+        </p>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="py-20 text-center">
+      <div class="max-w-6xl mx-auto px-5">
+        <h2 class="text-2xl md:text-3xl font-bold">What We Do</h2>
+        <p class="text-gray-500 mt-2 mb-10 text-sm">
+          We offer simple tech solutions to help your ideas grow
+        </p>
+
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+          <div>
+            <img
+              src="../assets/icons/Website.png"
+              class="mx-auto w-11 mb-3 bg-[#111111] p-2 rounded"
+            />
+            <h4 class="font-semibold">Web Development</h4>
+            <p class="text-gray-500 text-sm mt-1">
+              Modern websites using HTML,CSS,Javascript, and frameworks.
+            </p>
+          </div>
+
+          <div>
+            <img
+              src="../assets/icons/Mobile.png"
+              class="mx-auto w-11 mb-3 bg-[#080808] p-2 rounded"
+            />
+            <h4 class="font-semibold">App Development</h4>
+            <p class="text-gray-500 text-sm mt-1">
+              Mobile and desktop apps tailored for your needs
+            </p>
+          </div>
+
+          <div>
+            <img
+              src="../assets/icons/AI.png"
+              class="mx-auto w-11 mb-3 bg-[#0d0c0d] p-2 rounded"
+            />
+            <h4 class="font-semibold">AI Integration</h4>
+            <p class="text-gray-500 text-sm mt-1">
+              Smart solutions using AI-Powered tools and automation.
+            </p>
+          </div>
+
+          <div>
+            <img
+              src="../assets/icons/Paint.png"
+              class="mx-auto w-11 mb-3 bg-[#0a0a0a] p-2 rounded"
+            />
+            <h4 class="font-semibold">UI/UX Design</h4>
+            <p class="text-gray-500 text-sm mt-1">
+              Clean and functional designs for better user experience.
+            </p>
+          </div>
+
+          <div>
+            <img
+              src="../assets/icons/Landing-Page.png"
+              class="mx-auto w-11 mb-3 bg-[#050505] p-2 rounded"
+            />
+            <h4 class="font-semibold">Landing Page Design</h4>
+            <p class="text-gray-500 text-sm mt-1">
+              High-converting landing pages for your product or business.
+            </p>
+          </div>
+
+          <div>
+            <img
+              src="../assets/icons/CMS.png"
+              class="mx-auto w-11 mb-3 bg-[#090909] p-2 rounded"
+            />
+            <h4 class="font-semibold">CMS Development</h4>
+            <p class="text-gray-500 text-sm mt-1">
+              Easy-to-manage website with WordPress or Webflow.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PORTFOLIO -->
+    <section id="our-work" class="py-20 text-center">
+      <div class="max-w-6xl mx-auto px-5">
+        <h2 class="text-2xl md:text-3xl font-bold mb-6">Our Work</h2>
+        <p class="text-gray-500 mt-1 mb-10 text-sm">
+          See what we've built with passion adn purpose
+        </p>
+
+        <div class="grid md:grid-cols-3 gap-5">
+          <div class="bg-[#111] p-3 rounded">
+            <img src="../assets/images/Portfolio-1.png" class="rounded" />
+          </div>
+
+          <div class="bg-[#111] p-3 rounded">
+            <img src="../assets/images/Portfolio-2.png" class="rounded" />
+          </div>
+
+          <div class="bg-[#111] p-3 rounded">
+            <img src="../assets/images/Portfolio-3.png" class="rounded" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TEAM -->
+    <section id="team" class="py-20 text-center">
+      <div class="max-w-6xl mx-auto px-5">
+        <h2 class="text-2xl md:text-3xl font-bold">Meet the Team</h2>
+        <p class="text-gray-500 mt-2 mb-10 text-sm">
+          A group of future-ready tech makers
+        </p>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-10">
+          <div>
+            <img
+              src="../assets/images/Jenny-Kim.png"
+              class="w-24 h-24 md:w-28 md:h-28 rounded-full mx-auto mb-2 object-cover"
+            />
+            <h4>Jasper Kim</h4>
+            <p class="text-gray-500 text-sm">Project Manager</p>
+          </div>
+          <div>
+            <img
+              src="../assets/images/Alex-Jonathan.png"
+              class="w-24 h-24 md:w-28 md:h-28 rounded-full mx-auto mb-2 object-cover"
+            />
+            <h4>Alex Jonathan</h4>
+            <p class="text-gray-500 text-sm">Full-stack Developer</p>
+          </div>
+          <div>
+            <img
+              src="../assets/images/Mario-Lopez.png"
+              class="w-24 h-24 md:w-28 md:h-28 rounded-full mx-auto mb-2 object-cover"
+            />
+            <h4>Mario Lopez</h4>
+            <p class="text-gray-500 text-sm">UI/UX Designer</p>
+          </div>
+          <div>
+            <img
+              src="../assets/images/Jasper-Kim.png"
+              class="w-24 h-24 md:w-28 md:h-28 rounded-full mx-auto mb-2 object-cover"
+            />
+            <h4>Jasper Kim</h4>
+            <p class="text-gray-500 text-sm">Data Scientist</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="py-20 text-center">
+      <div class="max-w-md mx-auto px-5">
+        <h2 class="text-2xl md:text-3xl font-bold">Let's Collaborate</h2>
+        <p class="text-gray-500 mt-2 mb-8 text-sm">
+          Need a tech team? We're ready to help
+        </p>
+
+        <form class="flex flex-col gap-4">
+          <label class="text-[13px] text-white mr-auto flex"> Name </label>
+          <input
+            type="text"
+            placeholder="Enter your name"
+            class="bg-black border border-gray-600 p-2 rounded"
+          />
+          <label class="text-[13px] text-white mr-auto flex"> Email </label>
+          <input
+            type="email"
+            placeholder="Enter your email"
+            class="bg-black border border-gray-600 p-2 rounded"
+          />
+          <label class="text-[13px] text-white mr-auto flex"> Message </label>
+          <textarea
+            placeholder="Enter your message"
+            class="bg-black border border-gray-600 p-2 h-28 rounded"
+          ></textarea>
+
+          <button class="bg-[#421abc] py-3 rounded-full">Send</button>
+        </form>
+      </div>
+    </section>
 
     <!-- ========== FOOTER ========== -->
+    <footer class="text-center py-5 text-gray-500 text-sm">
+      © 2026 Web Programming Hack. All rights reserved
+    </footer>
   </body>
 </html>
